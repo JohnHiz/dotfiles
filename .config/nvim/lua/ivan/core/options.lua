@@ -5,8 +5,9 @@ opt.relativenumber = false
 opt.number = true
 
 -- tabs & indentation
-opt.tabstop = 2
-opt.shiftwidth = 2
+local tabWidth = tonumber(os.getenv("NVIM_INDENT")) or 4
+opt.tabstop = tabWidth
+opt.shiftwidth = tabWidth
 opt.expandtab = true
 opt.autoindent = true
 
@@ -22,7 +23,7 @@ opt.cursorline = true
 
 -- appearance
 opt.termguicolors = true
-opt.background = "light"
+opt.background = "dark"
 opt.signcolumn = "yes"
 
 -- backspace

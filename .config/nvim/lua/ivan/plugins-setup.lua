@@ -35,11 +35,19 @@ return packer.startup(function(use)
 	use({ "catppuccin/nvim", as = "catppuccin" })
 	use("Mofiqul/vscode.nvim")
 	use({ "projekt0n/github-nvim-theme", branch = "0.0.x" })
+	use({ "ellisonleao/gruvbox.nvim" })
 
 	-- tmux & split window navigation
 	use("christoomey/vim-tmux-navigator")
 
-	use("szw/vim-maximizer") -- maximizes and restores current window
+	-- Toggle termnal
+	use({ "akinsho/toggleterm.nvim", tag = "*" })
+
+	-- maximizes and restores current window
+	use("szw/vim-maximizer")
+
+	-- indent blankline shows dots in space/tab symbols
+	use("lukas-reineke/indent-blankline.nvim")
 
 	-- essential plugins
 	use("tpope/vim-surround")
